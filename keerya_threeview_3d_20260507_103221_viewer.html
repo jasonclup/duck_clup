@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Model Viewer</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; background: #f0f0f0; }
+    model-viewer { width: 100vw; height: 100vh; }
+    .label {
+      position: fixed; left: 16px; top: 16px; z-index: 10;
+      font: 14px/1.4 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: rgba(255,255,255,.82); color: #222; padding: 10px 12px;
+      border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    }
+  </style>
+</head>
+<body>
+  <div class="label">科尔鸭三视图生成 3D 模型 · 可旋转/缩放查看</div>
+  <model-viewer src="keerya_threeview_3d_20260507_103221.glb" camera-controls auto-rotate shadow-intensity="1" exposure="1" environment-image="neutral">
+  </model-viewer>
+</body>
+</html>
